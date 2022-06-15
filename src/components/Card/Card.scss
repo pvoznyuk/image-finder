@@ -1,0 +1,19 @@
+.card {
+  position: relative;
+
+  &Image {
+    img {
+      display: block;
+      max-width: 100%;
+      border: 10px solid lightcoral;
+    }
+  }
+
+  &Info {
+    position: absolute;
+    bottom: 1em;
+    right: 2em;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+  }
+}

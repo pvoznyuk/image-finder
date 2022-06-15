@@ -1,0 +1,13 @@
+.searchForm {
+  display: block;
+  max-width: 250px;
+  margin: 0 auto;
+
+  &Error, &Info {
+    padding-top: 0.5em;
+  }
+
+  &Error {
+    color: red;
+  }
+}
