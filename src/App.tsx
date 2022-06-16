@@ -56,7 +56,7 @@ const App = () => {
     })
   }
 
-  const renderWitch = () => {
+  const renderSwitch = () => {
     switch (step) {
       case Step.MATCH:
         return <Unsplash onAccept={handleAccept} onReject={handleFindPhoto} />
@@ -67,7 +67,7 @@ const App = () => {
     }
   }
 
-  return <Layout onReset={handleReset}>{renderWitch()}</Layout>
+  return <Layout onReset={handleReset}>{renderSwitch()}</Layout>
 }
 
 export default App

@@ -28,9 +28,7 @@ Write a small React JS Web application with the following functionality:
 
 # Notes
 
-- You are free to choose how you create the project (create-react-app, next.js, Gatsby...) and there is no
-  expectation to write server-side code for the purpose of this exercise.
+- You are free to choose how you create the project (create-react-app, next.js, Gatsby...) and there is no expectation to write server-side code for the purpose of this exercise.
 - Keep the page styling simple using standard user-experience and design guidelines.
 - Where possible, avoid "prop drilling" and utilize a state management solution.
-- Apply good coding practices and design patterns as you’d do in a production application, you are free
-  to utilize any libraries/frameworks of your choice.
+- Apply good coding practices and design patterns as you’d do in a production application, you are free to utilize any libraries/frameworks of your choice.
