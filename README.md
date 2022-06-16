@@ -1,5 +1,14 @@
 #Image Finder
 
+## How to run on local environment
+
+1. Install dependencies
+2. make a copy of `.env.example` file and rename it to `.env`
+3. insert a valid key for `REACT_APP_UNSPLASH_API_KEY`
+4. Run `npm install`
+5. Run `npm start`
+6. for tests run `npm test`
+
 ##Task
 
 Write a small React JS Web application with the following functionality:
