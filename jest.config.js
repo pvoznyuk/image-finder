@@ -1,4 +1,6 @@
 module.exports = {
+  automock: false,
+  // setupFiles: ['./setupJest.js'],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'json'],
   moduleNameMapper: {
     '\\.scss$': 'identity-obj-proxy',
@@ -10,4 +12,8 @@ module.exports = {
   transform: {
     '^.+\\.(ts|tsx)$': 'ts-jest',
   },
-};
+  testEnvironment: 'jsdom',
+  testEnvironmentOptions: {
+    browsers: ['chrome', 'firefox', 'safari'],
+  },
+}

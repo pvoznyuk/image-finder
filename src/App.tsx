@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { SearchForm } from '@components/SearchForm'
+import SearchForm from '@components/SearchForm/SearchForm'
 import { Unsplash } from '@components/Unsplash'
 import { Card } from '@components/Card'
 import { Layout } from '@components/Layout'

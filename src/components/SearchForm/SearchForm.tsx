@@ -54,6 +54,11 @@ const SearchForm = ({ onSubmit = () => null }: SearchFormProps) => {
 
     if (isFormValid) {
       onSubmit()
+    } else {
+      dispatch({
+        type: 'SET_ERROR',
+        payload: 'Please fill in all fields',
+      })
     }
   }
 
@@ -67,9 +72,11 @@ const SearchForm = ({ onSubmit = () => null }: SearchFormProps) => {
 
       {topic.value === 'Other' && <TextField field={customTopic} onChange={handleChange} disabled={isLoading} />}
 
-      <input type="submit" value="Submit" disabled={isLoading} />
+      <button type="submit" disabled={isLoading}>
+        Search
+      </button>
 
-      {isLoading && <div className={styles.searchFormInfo}>Searching...</div>}
+      {isLoading && <div className={styles.searchFormInfo}>🔎 Searching...</div>}
 
       {errorMessage && <div className={styles.searchFormError}>{errorMessage}</div>}
     </form>

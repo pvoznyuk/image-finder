@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import { Context } from '../../context/store'
 import styles from './Unsplash.scss'
 
-type UnsplashProps = {
+export type UnsplashProps = {
   onReject: () => void
   onAccept: () => void
 }
@@ -15,7 +15,7 @@ export default function Unsplash({ onReject, onAccept }: UnsplashProps) {
   return (
     <div className={styles.unsplash}>
       <div className={styles.unsplashContainer}>
-        {isLoading ? <span>Loading...</span> : <img src={photo.url} alt={photo.description} />}
+        {isLoading ? <span>🔎 Searching...</span> : <img src={photo.url} alt={photo.description} />}
       </div>
 
       <nav>
