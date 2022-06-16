@@ -1,4 +1,4 @@
-#Image Finder
+# Image Finder
 
 ## How to run on local environment
 
@@ -13,7 +13,7 @@
 
 ![demo](./demo.gif)
 
-##Task
+## Task
 
 Write a small React JS Web application with the following functionality:
 
