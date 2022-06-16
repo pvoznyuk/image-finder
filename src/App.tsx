@@ -18,6 +18,7 @@ const App = () => {
   const fetchPhotos = async () => {
     try {
       const data = await ApiService.Instance.getPhoto(queryTopic)
+      console.log({ data })
 
       dispatch({
         type: 'SET_PHOTO',

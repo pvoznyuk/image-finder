@@ -20,9 +20,9 @@ describe('SearchForm component', () => {
   })
 
   it('should render component with data from the context', () => {
-    expect(screen.getByText('First Name')).toBeTruthy()
-    expect(screen.getByText('Last Name')).toBeTruthy()
-    expect(screen.getByText('Topic')).toBeTruthy()
+    expect(screen.getByText('Name')).toBeTruthy()
+    expect(screen.getByText('Surname')).toBeTruthy()
+    expect(screen.getByText('Select topic')).toBeTruthy()
   })
 
   it('should show a custom topic', () => {
@@ -42,10 +42,10 @@ describe('SearchForm component', () => {
   })
 
   it('should call submit if the form is valid', () => {
-    fireEvent.change(screen.getByPlaceholderText(/First Name/i), {
+    fireEvent.change(screen.getByPlaceholderText('Name'), {
       target: { value: 'Luke' },
     })
-    fireEvent.change(screen.getByPlaceholderText(/Last Name/i), {
+    fireEvent.change(screen.getByPlaceholderText(/Surname/i), {
       target: { value: 'Skywalker' },
     })
     fireEvent.change(screen.getByDisplayValue(/Select topic/i), {

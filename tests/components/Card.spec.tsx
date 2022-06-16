@@ -23,7 +23,7 @@ describe('Card component', () => {
     </Store>,
   )
 
-  it('should render image, first name and last name', () => {
+  it('should render image, Name and Surname', () => {
     const image = screen.getByAltText('desc')
     expect(image.getAttribute('src')).toContain('http://img')
     expect(screen.getByText(/Luke/i)).toBeTruthy()
