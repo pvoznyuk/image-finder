@@ -25,6 +25,8 @@ const TextField = ({
         disabled={disabled}
         onChange={onChange}
         placeholder={placeholder}
+        autoComplete="off"
+        maxLength={50}
       />
     </label>
   )

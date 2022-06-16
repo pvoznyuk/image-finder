@@ -7,7 +7,7 @@ type StoreProps = {
 }
 
 const Store = ({ children, initialState }: StoreProps) => {
-  const [state, dispatch] = useReducer(reducer, initialState)
+  const [state, dispatch] = useReducer(reducer, { ...initialState })
   return <Context.Provider value={{ state, dispatch }}>{children}</Context.Provider>
 }
 

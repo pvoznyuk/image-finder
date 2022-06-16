@@ -100,4 +100,8 @@ describe('reducer', () => {
       },
     )
   })
+
+  it('should reset', () => {
+    expect(reducer({ ...initialState, step: Step.MATCH }, { type: 'RESET' })).toEqual(initialState)
+  })
 })

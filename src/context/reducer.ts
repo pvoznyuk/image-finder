@@ -1,5 +1,6 @@
 import deepmerge from 'deepmerge'
 import { IFormField, IPhoto, Step } from '../types'
+import initialState from './initialState'
 
 export interface State {
   step: Step
@@ -20,6 +21,7 @@ export type Actions =
   | { type: 'SET_LOADING' }
   | { type: 'SET_ERROR'; payload: string }
   | { type: 'SET_PHOTO'; payload: IPhoto }
+  | { type: 'RESET' }
 
 const Reducer = (state: State, action: Actions) => {
   switch (action.type) {
@@ -29,7 +31,7 @@ const Reducer = (state: State, action: Actions) => {
     case 'SET_FIELDS':
       const nextState = deepmerge(state, action.payload)
 
-      if (nextState.topic?.value !== 'Other') {
+      if (nextState.topic.value !== 'Other') {
         nextState.customTopic.value = ''
       }
 
@@ -49,6 +51,11 @@ const Reducer = (state: State, action: Actions) => {
         isLoading: false,
         errorMessage: '',
       }
+
+    case 'RESET': {
+      return { ...initialState }
+    }
+
     default:
       return state
   }

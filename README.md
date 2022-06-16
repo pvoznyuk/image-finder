@@ -9,6 +9,10 @@
 5. Run `npm start`
 6. for tests run `npm test`
 
+## Demo
+
+![demo](./demo.gif)
+
 ##Task
 
 Write a small React JS Web application with the following functionality:
