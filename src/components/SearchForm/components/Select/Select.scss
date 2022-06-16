@@ -1,23 +1,25 @@
+@import '../../../../style/colors';
+
 .select {
   display: block;
   margin-bottom: 1.2em;
 
   &Label {
     display: block;
-    margin-bottom: 0.4em;
     font-size: 0.8em;
     font-weight: bold;
+    margin-bottom: 0.4em;
   }
 
   &Input {
+    border-radius: 0;
+    border: 1px solid $lightgrey;
     padding: 8px 12px;
     width: 100%;
-    border: 1px solid lightgrey;
-    border-radius: 0;
   }
 
   &Error {
-    border-color: red;
-    color: red;
+    border-color: $red;
+    color: $red;
   }
 }

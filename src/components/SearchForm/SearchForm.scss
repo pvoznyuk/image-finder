@@ -1,13 +1,15 @@
+@import '../../style/colors';
+
 .searchForm {
   display: block;
-  max-width: 250px;
   margin: 0 auto;
+  max-width: 250px;
 
   &Error, &Info {
     padding-top: 0.5em;
   }
 
   &Error {
-    color: red;
+    color: $red;
   }
 }

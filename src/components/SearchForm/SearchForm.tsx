@@ -4,14 +4,13 @@ import { TextField } from './components/TextField'
 import { Select } from './components/Select'
 import { IFormField } from '../../types'
 import styles from './SearchForm.scss'
-
-const topics = ['Travel', 'Cars', 'Wildlife', 'Technology', 'Other']
+import { topics } from '../../common/const'
 
 export type SearchFormProps = {
   onSubmit: () => void
 }
 
-const SearchForm = ({ onSubmit = () => null }: SearchFormProps) => {
+const SearchForm = ({ onSubmit }: SearchFormProps) => {
   const {
     state: { firstName, lastName, topic, customTopic, isLoading, errorMessage },
     dispatch,
@@ -32,6 +31,9 @@ const SearchForm = ({ onSubmit = () => null }: SearchFormProps) => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
 
+    // validation rules:
+    // firstName, lastName and topic are required
+    // customTopic is required if topic is 'Other'
     const nextFields = [firstName, lastName, topic, customTopic].reduce((validatedFields, field) => {
       const isValid =
         field.name === 'customTopic' ? topic.value !== 'Other' || customTopic.value : field.value.length > 0

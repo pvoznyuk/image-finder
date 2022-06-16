@@ -1,6 +1,5 @@
 import React, { createContext, useReducer } from 'react'
 import reducer, { State } from './reducer'
-// import { initialState as storeInitialState } from './initialState'
 
 type StoreProps = {
   children: React.ReactNode
