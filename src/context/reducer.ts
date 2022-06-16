@@ -16,7 +16,7 @@ export interface State {
 
 export type Actions =
   | { type: 'SET_STEP'; payload: Step }
-  | { type: 'SET_FIELDS'; payload: { [_key: string]: IFormField } }
+  | { type: 'SET_FIELDS'; payload: { [_key: string]: Partial<IFormField> } }
   | { type: 'SET_LOADING' }
   | { type: 'SET_ERROR'; payload: string }
   | { type: 'SET_PHOTO'; payload: IPhoto }

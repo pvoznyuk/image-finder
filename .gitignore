@@ -2,3 +2,4 @@ node_modules
 test-coverage
 .history
 .env
+/coverage/
