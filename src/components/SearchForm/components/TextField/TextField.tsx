@@ -21,6 +21,7 @@ const TextField = ({
         className={`${styles.textFieldInput} ${!isValid ? styles.textFieldError : ''}`}
         type="text"
         name={name}
+        id={name}
         value={value}
         disabled={disabled}
         onChange={onChange}

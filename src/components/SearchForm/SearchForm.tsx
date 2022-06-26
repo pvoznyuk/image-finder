@@ -74,7 +74,7 @@ const SearchForm = ({ onSubmit }: SearchFormProps) => {
 
       {topic.value === 'Other' && <TextField field={customTopic} onChange={handleChange} disabled={isLoading} />}
 
-      <button type="submit" disabled={isLoading}>
+      <button id="search" type="submit" disabled={isLoading}>
         Search
       </button>
 

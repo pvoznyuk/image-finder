@@ -22,6 +22,7 @@ const Select = ({
       <select
         className={`${styles.selectInput} ${!isValid ? styles.selectError : ''}`}
         name={name}
+        id={name}
         value={value}
         onChange={onChange}
         disabled={disabled}
