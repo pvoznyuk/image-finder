@@ -23,8 +23,3 @@ jobs:
       - run: npm install
       - run: npm run lint
       - run: npm test
-      - uses: browser-actions/setup-chrome@latest
-      - uses: Hesedi3l/pa11y-actions@v1
-        with:
-          start: start
-          port: '8080'
